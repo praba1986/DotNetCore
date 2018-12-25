@@ -1,0 +1,13 @@
+﻿@using myfirstdotnetcore.Models
+@model Movie
+
+<h1>Create</h1>
+<form method="post">
+	<div>
+		<label asp-for="Name"></label>
+		<input asp-for="Name" />
+		<span asp-validation-for="Name"></span>
+	</div>
+	<input type="submit" name="Save" value="Save" />
+	<a asp-action="Index">Cancel</a>
+</form>

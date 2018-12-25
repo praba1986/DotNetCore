@@ -1,0 +1,26 @@
+﻿@model IEnumerable<myfirstdotnetcore.Models.Movie>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+</head>
+<body>
+	<table>
+		@foreach (var movie in Model)
+		{
+		<tr>
+			<td>@movie.Id</td>
+			<td>@movie.Name</td>
+			<td>
+				<a asp-action="Details" asp-route-id="@movie.Id">More</a>
+			</td>
+		</tr>
+		}
+		<tr>
+			<td>
+				<a asp-action="Create">Create</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
